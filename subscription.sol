@@ -19,7 +19,7 @@ contract Subs {
     function subscribe() external payable {
         require(msg.value >= SUBSCRIPTION_FEE, "Insufficient funds");
 
-        address payable recipient = payable(0x408979Bda7B9eA7d14089Eb35a0cdDC25F4fdF9e);
+        address payable recipient = payable(Replace with actual wallet address of recepient);
 
         // Send only the required subscription fee to the recipient
         (bool success, ) = recipient.call{value: SUBSCRIPTION_FEE}("");
